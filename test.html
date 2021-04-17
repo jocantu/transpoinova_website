@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="custom.js"></script>
+    <style>
+      body {
+      background: aliceblue;
+      }
+      .section-padding{
+      padding:60px 0;
+      }
+      .brand-carousel {
+      background: aliceblue;
+      margin-top: 15%;
+      }
+      .owl-dots {
+      text-align: center;
+      margin-top: 4%;
+      }
+      .owl-dot {
+      display: inline-block;
+      height: 15px !important;
+      width: 15px !important;
+      background-color: #878787 !important;
+      opacity: 0.8;
+      border-radius: 50%;
+      margin: 0 5px;
+      }
+      .owl-dot.active {
+      background-color: #000 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="brand-carousel section-padding owl-carousel">
+      <div class="single-logo">
+        <img src="img/clients-logos/almex.png" alt="">
+      </div>
+    <div class="single-logo">
+        <img src="img/clients-logos/amher.png" alt="">
+      </div>
+    <div class="single-logo">
+        <img src="img/clients-logos/cocacola-femsa.png" alt="">
+      </div>
+    <div class="single-logo">
+        <img src="img/clients-logos/Isuzu-Logo.png" alt="">
+      </div>
+    <div class="single-logo">
+        <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" alt="">
+      </div>
+    <div class="single-logo">
+        <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
+      </div>
+    </div>
+
+    <script>
+      $('.brand-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        autoplay:true,
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+            items:3
+          },
+          1000:{
+            items:5
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
