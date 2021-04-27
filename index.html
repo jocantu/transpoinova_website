@@ -5,6 +5,8 @@
     <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3e717d5eb1.js" crossorigin="anonymous"></script>
     <title>Transpoinova</title>
@@ -121,54 +123,130 @@
         <div class="service-element"></div>
         <div class="service-element"></div>
       </div>
-      <div class="slider">
-	<div class="slide-track">
-  		<div class="slide">
-  			<img src="img/almex.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="img/amher.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="img/cocacola-femsa.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="img/Isuzu-Logo.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-  		</div>
-  		<div class="slide">
-  			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-  		</div>
-  	</div>
-  </div>
+      </div>
+      <div class="our-clients">
+        <div class="clients-title">
+          <h3>Ellos han confiado en nosotros</h3>
+        </div>
+
+        <div class="slider">
+            <div class="slider-track">
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/almex.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/amher.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/kidron.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/almex.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/amher.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/kidron.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/almex.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/amher.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/kidron.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/almex.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/amher.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/kidron.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/almex.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/amher.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/kidron.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/almex.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/amher.png." alt="Almex Logo">
+              </div>
+              <div class="slide slide-logo">
+                <img src="img/clients-logos/kidron.png." alt="Almex Logo">
+              </div>
+            </div>
+        </div>
+      </div>
+    <div class="contact">
+      <div id="mymap">
+
+      </div>
+      <div class="contact-info">
+        <h2>Contactanos</h2>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt contact-ico"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Dirección</h5>
+              <ul>
+                <li>Monterrey</li>
+                <li>Torreón</li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone contact-ico"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Teléfono</h5>
+              <ul>
+                <li>(+52)87-11 28 9797</li>
+                <li>(+52)87-11-289747</li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="far fa-envelope contact-ico"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Correo electrónico</h5>
+              <ul>
+                <li>ventas1@transpoinova.com</li>
+                <li>ventas2@transpoinova.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt contact-ico"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Dirección</h5>
+              <ul>
+                <li>Monterrey</li>
+                <li>Torreón</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
+
     <script src="js/main.js"></script>
   </body>
 </html>

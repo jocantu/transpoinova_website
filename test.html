@@ -2,81 +2,98 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="custom.js"></script>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-      background: aliceblue;
+        background-color: #e3e3e3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      .section-padding{
-      padding:60px 0;
+
+      .slider {
+        background-color: white;
+        width: 960px;
+        height: 100px;
+        overflow: hidden;
+        position: relative;
+        margin: auto;
+        box-shadow: 0 10px 20px -5px rgba(0,0,0,0.5);
       }
-      .brand-carousel {
-      background: aliceblue;
-      margin-top: 15%;
+        .slider::before, .slider::after {
+          content: '';
+          position: absolute;
+          width: 200px;
+          height: 100px;
+          background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+          z-index: 2;
+        }
+        .slider::before{
+          top: 0;
+          left:0;
+        }
+        .slider::after{
+          top: 0;
+          right: 0;
+          transform: rotateZ(180deg);
+        }
+        .slider .slider-track{
+          display: flex;
+          width: calc(250px * 14);
+          animation: scroll 40s infinite linear;
+        }
+
+        .slider .slide img{
+          width: 250px;
+          height: 100px;
+        }
+
+        @keyframes scroll {
+            0%{
+              transform: translate(0%);
+            }
+            100%{
+              transform: translate(calc(-250px * 7));
+            }
+        }
+
       }
-      .owl-dots {
-      text-align: center;
-      margin-top: 4%;
-      }
-      .owl-dot {
-      display: inline-block;
-      height: 15px !important;
-      width: 15px !important;
-      background-color: #878787 !important;
-      opacity: 0.8;
-      border-radius: 50%;
-      margin: 0 5px;
-      }
-      .owl-dot.active {
-      background-color: #000 !important;
+
+      .slide-logo img{
+        width: 200px;
       }
     </style>
   </head>
   <body>
-    <div class="brand-carousel section-padding owl-carousel">
-      <div class="single-logo">
-        <img src="img/clients-logos/almex.png" alt="">
-      </div>
-    <div class="single-logo">
-        <img src="img/clients-logos/amher.png" alt="">
-      </div>
-    <div class="single-logo">
-        <img src="img/clients-logos/cocacola-femsa.png" alt="">
-      </div>
-    <div class="single-logo">
-        <img src="img/clients-logos/Isuzu-Logo.png" alt="">
-      </div>
-    <div class="single-logo">
-        <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" alt="">
-      </div>
-    <div class="single-logo">
-        <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
+    <div class="slider">
+      <div class="slider-track">
+        <div class="slide slide-logo">
+          <img src="img/clients-logos/almex.png." alt="Almex Logo">
+        </div>
+        <div class="slide slide-logo">
+          <img src="img/clients-logos/amher.png." alt="Almex Logo">
+        </div>
+        <div class="slide slide-logo">
+          <img src="img/clients-logos/kidron.png." alt="Almex Logo">
+        </div>
+        <div class="slide slide-logo">
+          <img src="img/clients-logos/almex.png." alt="Almex Logo">
+        </div>
+        <div class="slide slide-logo">
+          <img src="img/clients-logos/amher.png." alt="Almex Logo">
+        </div>
+        <div class="slide slide-logo">
+          <img src="img/clients-logos/kidron.png." alt="Almex Logo">
+        </div>
       </div>
     </div>
-
-    <script>
-      $('.brand-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        autoplay:true,
-        responsive:{
-          0:{
-            items:1
-          },
-          600:{
-            items:3
-          },
-          1000:{
-            items:5
-          }
-        }
-      })
-    </script>
   </body>
 </html>

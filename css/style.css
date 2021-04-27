@@ -34,6 +34,10 @@ nav {
   z-index: 100;
 }
 
+li {
+  list-style: none;
+}
+
 .logo {
   padding-left: 40px;
 }
@@ -272,48 +276,104 @@ $animationSpeed: 40s;
 }
 
 
-// Styling
-.slider {
-	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	height: 100px;
-	margin: auto;
-	overflow:hidden;
-	position: relative;
-	width: 960px;
-
-	&::before,
-	&::after {
-		@include white-gradient;
-		content: "";
-		height: 100px;
-		position: absolute;
-		width: 200px;
-		z-index: 2;
-	}
-
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
-
-	&::before {
-		left: 0;
-		top: 0;
-	}
-
-	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
-
-	.slide {
-		height: 100px;
-		width: 250px;
-	}
+/* Client Slider */
+.our-clients {
+  display: block;
+  align-items:center;
+  justify-content: center;
+  height: 300px;
+  margin: 0px 20px;
+  padding: 0px 20px;
 }
+
+.clients-title{
+  width: 100%;
+}
+
+.slider {
+  background-color: white;
+  height: 150px;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  .slider::before, .slider::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+    z-index: 2;
+  }
+  .slider::before{
+    top: 0;
+    left:0;
+  }
+  .slider::after{
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+  }
+  .slider .slider-track{
+    display: flex;
+    width: calc(250px * 14);
+    animation: scroll 40s infinite linear;
+  }
+
+  .slider .slide img{
+    width: 250px;
+    height: 100px;
+  }
+
+/* Contact sections */
+.contact {
+  display: flex;
+  margin: 0px 20px;
+  padding: 0px 20px;
+  height: 400px;
+}
+
+#mymap {
+  height: 100%;
+  width: 50%;
+}
+
+.contact-info {
+  background-color: rgba(225,29,7);
+  width: 50%;
+  padding: 20px;
+  color: white;
+}
+
+.contact-info h2{
+  color: white;
+}
+
+.contact-ico {
+  font-size: 2.5rem;
+}
+
+.contact-items{
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: auto auto;
+}
+
+.contact-item {
+  background-color: green;
+}
+
+  @keyframes scroll {
+      0%{
+        transform: translate(0%);
+      }
+      100%{
+        transform: translate(calc(-250px * 7));
+      }
+  }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
